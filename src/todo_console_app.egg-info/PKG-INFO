@@ -1,0 +1,94 @@
+Metadata-Version: 2.4
+Name: todo-console-app
+Version: 0.1.0
+Summary: Phase 1: In-memory Python console todo application with 5 Basic Level features
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# Todo Console App - Phase 1
+
+**Hackathon Project**: Evolution of Todo - Phase 1 (Console Application)
+
+## Overview
+
+A command-line todo application with in-memory storage featuring 5 Basic Level operations:
+1. View all tasks
+2. Add new task
+3. Mark task complete/incomplete
+4. Update task details
+5. Delete task
+
+## Requirements
+
+- Python 3.13+
+- UV package manager
+
+## Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/Aliladla/hackathon2phase1.git
+cd hackathon2phase1
+
+# Install dependencies
+uv sync
+
+# Run the application
+uv run python -m todo
+```
+
+## Usage
+
+The application provides an interactive menu:
+
+```
+=== Todo App ===
+1. View all tasks
+2. Add new task
+3. Mark task complete/incomplete
+4. Update task
+5. Delete task
+6. Exit
+
+Enter choice (1-6):
+```
+
+## Testing
+
+```bash
+# Run all tests
+uv run pytest
+
+# Run with coverage
+uv run pytest --cov=src/todo --cov-report=html
+```
+
+## Architecture
+
+- **Domain Layer** (`src/todo/domain/`): Core business logic (Task entity, TaskManager)
+- **Storage Layer** (`src/todo/storage/`): In-memory repository
+- **CLI Layer** (`src/todo/cli/`): User interface and display
+
+## Features
+
+- ✅ Add tasks with title and description
+- ✅ View all tasks with status indicators
+- ✅ Mark tasks as complete/incomplete
+- ✅ Update task details
+- ✅ Delete tasks
+- ✅ Input validation and error handling
+
+## Limitations (Phase 1)
+
+- In-memory storage only (tasks lost on exit)
+- Single-user application
+- No persistence to disk
+
+## Next Phases
+
+- **Phase 2**: Full-stack web application with database persistence
+- **Phase 3**: AI-powered chatbot interface
+
+## License
+
+MIT
